@@ -5,41 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oliver Howe</title>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=block&subset=latin"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="/OH.svg" type="image/svg+xml" />
     <meta
       name="description"
       content="Personal website of Oliver Howe, student at Harvey Mudd College interested in computer engineering."
     />
   </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Oliver Howe</h1>
-      </header>
-
-      <nav class="nav-links">
-        <a href="https://www.github.com/ohowe1" class="nav-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/oliver-howe" class="nav-link"
-          >LinkedIn</a
-        >
-      </nav>
-
-      <main>
-        <p>
-          I am a student at Harvey Mudd College interested in computer
-          engineering.
-        </p>
-
-        <p>
-          You can contact me at
-          <span style="font-style: italic">oliver [at] this domain</span>.
-        </p>
-      </main>
+  <body class="font-serif h-auto text-center bg-white">
+    <header
+      id="header"
+      class="fixed top-1/2 left-0 -translate-y-1/2 w-full mix-blend-exclusion invert"
+    >
+      <h1 class="text-5xl font-normal py-2 opacity-0" id="title">
+        Oliver Howe
+      </h1>
+      <p class="font-light opacity-0" id="description">
+        Student at Harvey Mudd College interested in computer engineering.
+      </p>
+    </header>
+    <div class="w-screen h-screen">
+      <div id="scroll-tracker" class="h-full w-full"></div>
+      <div class="display-none h-full w-full" id="content">
+        <div class="flex flex-col items-center h-full w-full space-y-8">
+          <section class="w-full flex flex-col items-center">
+            <h1 class="text-3xl font-bold">Education & Experience</h1>
+            <a href="https://linkedin.com/in/oliver-howe" class="underline text-lg text-3xl text-blue-400 mb-2">LinkedIn</a>
+            <p class="mx-2 md:max-w-3/5 lg:max-w-2/5">
+              I am currently studying engineering at Harvey Mudd College and
+              expecting to graduate in 2028. This summer, I am an intern at NASA
+              Jet Propulsion Laboratory in Pasadena CA in the RF Electronics
+              Group.
+            </p>
+          </section>
+          <section class="w-full max-w-2xl flex flex-col items-center">
+            <h1 class="text-3xl font-bold">Projects</h1>
+            <a href="https://github.com/ohowe1" class="underline text-lg text-3xl text-blue-400 mb-2">GitHub</a>
+          </section>
+          <section class="w-full max-w-2xl flex flex-col items-center">
+            <h1 class="text-3xl font-bold">Contact</h1>
+            <p class="text-center">You can reach me by emailing <em>oliver</em> [at] this domain.</p>
+          </section>
+        </div>
+      </div>
     </div>
+    <script type="module" src="animations.ts"></script>
   </body>
 </html>
