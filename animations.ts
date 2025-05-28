@@ -1,4 +1,4 @@
-import { animate, scroll } from "motion";
+import { animate, inView, scroll } from "motion";
 
 scroll(
   animate("#title", {
@@ -50,19 +50,30 @@ const initialFadeIn = animate([
   [
     "#content",
     {
-      display: ["none", "block"]
-    }
-  ]
+      display: ["none", "block"],
+    },
+  ],
 ]);
 
 initialFadeIn.finished.then(() => {
   scroll(
     animate("#description", {
       opacity: [1, 0],
+      visibility: ["visible", "hidden"]
     }),
     {
       offset: ["25% start", "50% start"],
       target: document.getElementById("scroll-tracker")!,
     }
   );
+
+  inView("section", (element) => {
+    animate(element, { 
+      opacity: 1,
+    },
+    {
+      duration: 1, ease: "easeIn", delay: 0.5
+    }
+  );
+  });
 });
