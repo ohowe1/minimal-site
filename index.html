@@ -36,18 +36,15 @@
     </header>
     <div class="h-screen">
       <div id="scroll-tracker" class="h-full" aria-hidden="true"></div>
+      <!-- flex is added in the transition.ts -->
       <div
-        class="hidden h-full w-full flex flex-col items-center justify-center space-y-8 sm:space-y-12 md:space-y-16 px-4"
+        class="hidden h-full w-full flex-col items-center justify-center space-y-8 sm:space-y-12 md:space-y-16 px-4"
         id="content"
       >
-        <section class="w-full max-w-2xl flex flex-col items-center opacity-0">
-          <h1 class="text-2xl sm:text-3xl font-bold">Education & Experience</h1>
-          <a
-            href="https://linkedin.com/in/oliver-howe"
-            class="underline text-lg sm:text-xl text-blue-400 mb-2"
-            >LinkedIn</a
-          >
-          <p class="mx-2 text-sm sm:text-base md:max-w-3/5 lg:max-w-2/5">
+        <section class="section opacity-0">
+          <h1>Education & Experience</h1>
+          <a href="https://linkedin.com/in/oliver-howe">LinkedIn</a>
+          <p>
             I am currently studying engineering at Harvey Mudd College and
             expecting to graduate in 2028. This summer, I am an intern at NASA
             Jet Propulsion Laboratory in Pasadena CA in the RF Electronics
@@ -55,20 +52,14 @@
           </p>
         </section>
 
-        <section class="w-full max-w-2xl flex flex-col items-center opacity-0">
-          <h1 class="text-2xl sm:text-3xl font-bold">Projects</h1>
-          <a
-            href="https://github.com/ohowe1"
-            class="underline text-lg sm:text-xl text-blue-400 mb-2"
-            >GitHub</a
-          >
+        <section class="section opacity-0">
+          <h1>Projects</h1>
+          <a href="https://github.com/ohowe1">GitHub</a>
         </section>
 
-        <section class="w-full max-w-2xl flex flex-col items-center opacity-0">
-          <h1 class="text-2xl sm:text-3xl font-bold">Contact</h1>
-          <p class="text-sm sm:text-base">
-            You can reach me by emailing <em>oliver</em> [at] this domain.
-          </p>
+        <section class="section opacity-0">
+          <h1>Contact</h1>
+          <p>You can reach me by emailing <em>oliver</em> [at] this domain.</p>
         </section>
       </div>
     </div>
