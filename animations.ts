@@ -7,7 +7,7 @@ scroll(
   {
     offset: ["start start", "50% start"],
     target: document.getElementById("scroll-tracker")!,
-  }
+  },
 );
 
 const header = document.getElementById("header")!;
@@ -25,7 +25,7 @@ function updateHeaderAnimation() {
     {
       offset: ["start start", "50% start"],
       target: document.getElementById("scroll-tracker")!,
-    }
+    },
   );
 }
 
@@ -50,7 +50,7 @@ const initialFadeIn = animate([
   [
     "#content",
     {
-      display: ["none", "block"],
+      display: ["none", "flex"],
     },
   ],
 ]);
@@ -59,21 +59,25 @@ initialFadeIn.finished.then(() => {
   scroll(
     animate("#description", {
       opacity: [1, 0],
-      visibility: ["visible", "hidden"]
+      visibility: ["visible", "hidden"],
     }),
     {
       offset: ["25% start", "50% start"],
       target: document.getElementById("scroll-tracker")!,
-    }
+    },
   );
 
   inView("section", (element) => {
-    animate(element, { 
-      opacity: 1,
-    },
-    {
-      duration: 1, ease: "easeIn", delay: 0.5
-    }
-  );
+    animate(
+      element,
+      {
+        opacity: 1,
+      },
+      {
+        duration: 1,
+        ease: "easeIn",
+        delay: 0.5,
+      },
+    );
   });
 });
