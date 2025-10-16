@@ -5,15 +5,19 @@
 }
 
 @layer components {
+  a {
+    @apply text-blue-400 hover:underline;
+  }
+
   .section {
-    @apply w-full max-w-2xl flex flex-col items-center;
+    @apply w-full max-w-3xl flex flex-col items-center;
 
     h1 {
       @apply text-2xl sm:text-3xl font-bold;
     }
 
-    a {
-      @apply hover:underline text-lg sm:text-xl text-blue-400 mb-2;
+    > a {
+      @apply text-lg sm:text-xl mb-2;
     }
 
     p {
